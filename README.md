@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# AI Fitness Coach App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personalized fitness and nutrition planning application powered by AI that generates customized workout and meal plans based on user profiles and goals.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Personalized AI Plans**: Generates custom 7-day fitness and nutrition plans using Groq AI
+- **Dynamic Meal Planning**: Daily varied meals with calories and macros
+- **Exercise Library**: Detailed exercises with instructions and muscle groups
+- **Real Images**: Fetches exercise and food images from Pexels API
+- **User Profiles**: Custom plans based on age, goals, fitness level, dietary preferences
+- **Interactive UI**: Navigate through daily plans with smooth animations
+- **Dark Mode**: Full dark/light theme support
+- **Responsive Design**: Works on all devices
 
-### `npm start`
+## Voice Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application includes comprehensive voice functionality for accessibility and convenience:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Workout Plan Voice**: Click volume icons to hear exercise details, instructions, and workout tips
+- **Nutrition Plan Voice**: Click volume icons to hear meal descriptions, nutritional information, and diet tips
+- **Text-to-Speech**: Uses browser's built-in speech synthesis for natural voice reading
+- **Color-Coded Buttons**: Blue buttons for exercises, green buttons for meals
+- **Accessibility**: Proper aria-labels and keyboard navigation support
 
-### `npm test`
+**Voice Content Examples:";**
+- Adoption Exercise: '';Exercise Name . Instructions. Perform
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How It Works
 
-### `npm run build`
+1. **User Input**: Fill out profile form with personal details and fitness goals
+2. **AI Generation**: Groq AI creates personalized 7-day workout and nutrition plans
+3. **Image Enhancement**: Pexels API provides real images for exercises and meals
+4. **Interactive Display**: Navigate through daily plans with detailed information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **TailwindCSS** - Styling
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend/APIs
+- **Groq AI** - AI plan generation (llama-3.3-70b-versatile)
+- **Pexels API** - Image search and retrieval
+- **LocalStorage** - Client-side data persistence
 
-### `npm run eject`
+### Development Tools
+- **Create React App** - Project setup
+- **Vite** - Build tool (if applicable)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ai-fitness-assistant
 
-## Learn More
+Install dependencies:
+bash
+npm install
+Set up API keys:
+Get Groq API key: https://groq.com/
+Get Pexels API key: https://pexels.com/api/
+Update keys in src/services/api.ts
+Running the Application
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+npm start
+Open http://localhost:3000 to view the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Build for Production
+bash
+npm run build
+API Configuration
+Update the following constants in src/services/api.ts:
+
+typescript
+const GROQ_API_KEY = 'your-groq-api-key';
+const PEXELS_API_KEY = 'your-pexels-ap
+
+Vercel Deployed Link
+https://ai-fitness-assistant-ecru.vercel.app/
