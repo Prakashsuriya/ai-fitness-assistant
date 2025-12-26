@@ -1,7 +1,7 @@
 import { UserProfile, FitnessPlan } from '../types/index';
 
-const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
-const PEXELS_API_KEY = import.meta.env.VITE_PEXELS_API_KEY || '';
+const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY || '';
+const PEXELS_API_KEY = process.env.REACT_APP_PEXELS_API_KEY || '';
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const PEXELS_API_URL = 'https://api.pexels.com/v1/search';
